@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1734536662 source:c:\users\velokoleso\documents\проги на с\Прога 3\queue.c
+	"queue.h"
+
+1734536558 c:\users\velokoleso\documents\проги на с\Прога 3\queue.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<windows.h>
+
+1734536441 source:c:\users\velokoleso\documents\проги на с\Прога 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<windows.h>
+	"queue.h"
+
