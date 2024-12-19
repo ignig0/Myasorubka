@@ -8,9 +8,29 @@
 
 
 
-int main() {
+int main(int argc, char *argv[]) {
     int n;
 
+    if (argc>=3){
+
+       if (strcmp(argv[1],"--file")==0){
+
+         FILE *file = NULL;
+         char str[50];
+         file = fopen("sp.txt","r");
+         fseek(file, 0, SEEK_SET);
+         if(fgets(str,50,file)!=NULL){
+
+            printf("Предыдущий ряд: %s", str);
+
+         }
+         if(fgets(str,50,file)!=NULL){
+
+            printf("Предыдущий  отсортированный ряд: %s", str);
+        }
+
+       }
+    }
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     printf("Введите ряд чисел.Чтобы закончить ввод ввведите end\n");

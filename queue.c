@@ -5,11 +5,11 @@ void queue_put(Queue *queue, int inf) {
     Elem *new = (Elem *) malloc(sizeof(Elem));
     new->inf = inf;
     new->link = NULL;
-    if (!queue->BegQ) {
+    if (!queue->BegQ) {//пуста
         queue->BegQ = new;
         queue->EndQ = new;
     }
-    else {
+    else {//не пуста
         queue->EndQ->link = new;
         queue->EndQ = new;
     }
@@ -56,7 +56,7 @@ void queue_sort(Queue *queue) {
         Elem *link = current->link;
 
         while (link != NULL) {
-            if (link->inf > max->inf) {
+            if (link->inf > max->inf) {                                                                                                                              //link->inf (текущий элемент), max->inf -макс
                 max = link;
             }
             link = link->link;
